@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "firstName": "yashwanth",
+    "lastName": "Vanaparthi",
+    "phoneNumber": "+919502209854"
+  },
+  {
+    "id": 2,
+    "firstName": "Pranay",
+    "lastName": "Adilapuram",
+    "phoneNumber": "+916304399872"
+  },
+  {
+    "id": 3,
+    "firstName": "v",
+    "lastName": "yash",
+    "phoneNumber": "+918712327363"
+  },
+  {
+    "id": 4,
+    "firstName": "Ronith",
+    "lastName": "V",
+    "phoneNumber": "+918096724045"
+  },
+  {
+    "id": 5,
+    "firstName": "Data Taskers",
+    "lastName": "HR",
+    "phoneNumber": "+919810153260"
+  }
+]
