@@ -70,3 +70,31 @@ The application is deployed and can be accessed at:
    ```
 2. Run `npm install` to install dependencies
 3. Create a `.env` file with your Twilio credentials:
+REACT_APP_TWILIO_ACCOUNT_SID=your_account_sid
+REACT_APP_TWILIO_AUTH_TOKEN=your_auth_token
+REACT_APP_TWILIO_PHONE_NUMBER=your_twilio_phone_number
+
+### ⚠️ Important Notes About SMS Verification
+
+When testing the application with Twilio:
+
+1. **Trial Account Limitations**
+   - Only verified phone numbers can receive messages
+   - Daily message limit applies to trial accounts
+   - Test messages will show "verification needed" for unverified numbers
+
+2. **Verifying Phone Numbers**
+   - Go to your [Twilio Console](https://console.twilio.com/)
+   - Navigate to "Verified Numbers"
+   - Add the phone numbers you want to test with
+   - Wait for verification code and confirm
+
+3. **Development Mode**
+   - The app simulates successful message delivery in development
+   - Check browser console for debug information
+   - Real SMS delivery requires verified numbers
+
+4. **Troubleshooting**
+   - Ensure phone numbers are in correct international format
+   - Verify Twilio credentials in .env file
+   - Check browser console for detailed error messages
