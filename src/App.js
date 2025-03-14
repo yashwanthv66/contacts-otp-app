@@ -318,11 +318,22 @@ function AppContent() {
   );
 }
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ContactsList from './components/ContactsList';
+import ContactDetails from './components/ContactDetails';
+import MessageHistory from './components/MessageHistory';
+
+import { BrowserRouter } from 'react-router-dom';
+
 function App() {
   return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
+    <BrowserRouter basename="/">
+      <Routes>
+        <Route path="/" element={<ContactsList />} />
+        <Route path="/contact/:id" element={<ContactDetails />} />
+        <Route path="/messages" element={<MessageHistory />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
