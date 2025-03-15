@@ -1,0 +1,14 @@
+[build]
+  functions = "netlify/functions"
+  publish = "build"  # Specify your build directory
+
+[dev]
+  functions = "netlify/functions"
+  
+# Remove the problematic redirect that starts with /.netlify
+# Netlify automatically handles function routing
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
