@@ -302,38 +302,21 @@ const MessagesList = () => {
   );
 };
 
-function AppContent() {
-  return (
-    <Router>
-      <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<ContactsListPage />} />
-          <Route path="/contact/:id" element={<ContactDetails />} />
-          <Route path="/compose/:id" element={<ComposeMessage />} />
-          <Route path="/messages" element={<MessagesList />} />
-        </Routes>
-      </Box>
-    </Router>
-  );
-}
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ContactsList from './components/ContactsList';
-import ContactDetails from './components/ContactDetails';
-import MessageHistory from './components/MessageHistory';
-
-import { BrowserRouter } from 'react-router-dom';
-
 function App() {
   return (
-    <BrowserRouter basename="/">
-      <Routes>
-        <Route path="/" element={<ContactsList />} />
-        <Route path="/contact/:id" element={<ContactDetails />} />
-        <Route path="/messages" element={<MessageHistory />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <Router>
+        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<ContactsListPage />} />
+            <Route path="/contact/:id" element={<ContactDetails />} />
+            <Route path="/compose/:id" element={<ComposeMessage />} />
+            <Route path="/messages" element={<MessagesList />} />
+          </Routes>
+        </Box>
+      </Router>
+    </ThemeProvider>
   );
 }
 
